@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="timeLabel" text="0:0:0" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonAction" text="open">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#playMedia" prefWidth="100.0" text="play">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#stopMedia" text="stop">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#pauseMedia" text="pause">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#verySlowMedia" text="&lt;&lt;&lt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#slowMedia" text="&lt;&lt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#fastMedia" text="&gt;&gt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#veryFastMedia" text="&gt;&gt;&gt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#exitMedia" text="exit">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Button>
+                  <Label text="Volume">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Slider fx:id="volumeSlider" prefWidth="70.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+            <Slider fx:id="sceneSlider" StackPane.alignment="BOTTOM_CENTER" />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
